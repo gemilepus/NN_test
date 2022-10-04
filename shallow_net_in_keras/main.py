@@ -37,7 +37,7 @@ y_train = tf.keras.utils.to_categorical(y_train, n_classes)
 y_test = tf.keras.utils.to_categorical(y_test, n_classes)
 
 model = tf.keras.models.Sequential()
-model.add(tf.keras.layers.Dense(64, activation='sigmoid', input_shape=(784,)))
+model.add(tf.keras.layers.Dense(64, activation='ReLU', input_shape=(784,)))
 model.add(tf.keras.layers.Dense(10, activation='softmax'))
 
 model.compile(loss='mean_squared_error',
