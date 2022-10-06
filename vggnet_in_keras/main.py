@@ -2,13 +2,6 @@ import tensorflow as tf
 import tflearn.datasets.oxflower17 as oxflower17
 Dense = tf.keras.layers.Dense
 
-
-# from tensorflow.keras.models import Sequential
-# from tensorflow.keras.layers import Dense, Dropout, Flatten, Conv2D, MaxPooling2D
-# from tensorflow.keras.layers import BatchNormalization
-
-# from keras.callbacks import TensorBoard
-
 X, Y = oxflower17.load_data(one_hot=True)
 
 model = tf.keras.models.Sequential()
@@ -55,4 +48,4 @@ Model: "sequential"
 
 model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
-model.fit(X, Y, batch_size=64, epochs=240, verbose=1, validation_split=0.1, shuffle=True)  # callbacks=[tensorbrd])
+model.fit(X, Y, batch_size=64, epochs=240, verbose=1, validation_split=0.1, shuffle=True)
