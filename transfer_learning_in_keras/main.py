@@ -12,7 +12,7 @@ model = tf.keras.models.Sequential()
 model.add(vgg19)
 
 model.add(tf.keras.layers.Flatten(name='flattened'))
-model.add(tf.keras.layers.Dropout(0.5, name='dropout'))
+model.add(tf.keras.layers.Dropout(0.7, name='dropout'))
 model.add(tf.keras.layers.Dense(2, activation='softmax', name='predictions'))
 
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
