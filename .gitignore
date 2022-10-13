@@ -3,3 +3,4 @@ alexnet_in_keras/17flowers/
 transfer_learning_in_keras/data/
 transfer_learning_in_keras/test/
 *.hdf5
+*.npy
