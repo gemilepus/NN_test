@@ -151,7 +151,7 @@ adversarial_model.compile(loss='binary_crossentropy',
                           metrics=['accuracy'])
 
 
-def train(train_round=1000, batch=128, z_dim=z_dimensions):
+def train(train_round=500, batch=128, z_dim=z_dimensions):
     d_metrics = []
     a_metrics = []
 
@@ -239,7 +239,7 @@ ax = pd.DataFrame(
 ).plot(title='Training Loss', logy=True)
 ax.set_xlabel("train_round")
 ax.set_ylabel("Loss")
-
+plt.show()
 
 ax = pd.DataFrame(
     {
@@ -249,3 +249,4 @@ ax = pd.DataFrame(
 ).plot(title='Training Accuracy')
 ax.set_xlabel("train_round")
 ax.set_ylabel("Accuracy")
+plt.show()
